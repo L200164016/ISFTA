@@ -19,5 +19,8 @@ import dataIFSFTA.views as view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', view.home_view , name='adminpanel'),
+    path('admindashboard', view.admin_dashboard , name='adminpanel'),
+    path('adminvalidasi', view.admin_validasi , name='adminvalidasi'),
+    path('', view.home_view , name='indexbase'),
+
 ]

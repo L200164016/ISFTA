@@ -4,5 +4,11 @@ from django.http import JsonResponse
 from django.db import models
 from django.db.models import *
 
-def home_view(request,*args, **kwargs):
+def admin_dashboard(request,*args, **kwargs):
     return render(request,"admindashboard.html")
+
+def admin_validasi(request,*args, **kwargs):
+    return render(request,"adminvalidasi.html")    
+
+def home_view(request,*args, **kwargs):
+    return render(request,"indexbase.html")

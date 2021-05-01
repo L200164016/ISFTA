@@ -26,6 +26,9 @@
     <!-- Custom Css -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
+    <!-- JQuery DataTable Css -->
+    <link href="{% static 'plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css' %}" rel="stylesheet">
+
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="{% static 'css/themes/all-themes.css' %}" rel="stylesheet" />
 </head>
@@ -277,51 +280,7 @@
             </div>
             <!-- #User Info -->
             <!-- Menu -->
-            <div class="menu">
-                <ul class="list">
-                    <li class="header">MAIN NAVIGATION</li>
-                    <li class="active">
-                        <a href="index.html">
-                            <i class="material-icons">home</i>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pages/typography.html">
-                            <i class="material-icons">verified_user</i>
-                            <span>Validasi Profile</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">face</i>
-                            <span>Manage Profile</span>
-                        </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a href="{% static 'pages/ui/alerts.html' %}">All Profile</a>
-                            </li>
-                            <li>
-                                <a href="{% static 'pages/ui/alerts.html' %}">Active Profile</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">assignment</i>
-                            <span>Manage User</span>
-                        </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a href="{% static 'pages/ui/alerts.html' %}">Regular User</a>
-                            </li>
-                            <li>
-                                <a href="{% static 'pages/ui/animations.html' %}">Artist</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+{% block menu %} {% endblock %}
             <!-- #Menu -->
             <!-- Footer -->
             <div class="legal">
@@ -378,6 +337,8 @@
 
     <!-- Demo Js -->
     <script src="{% static 'js/demo.js' %}"></script>
+
+    {% block js %}{% endblock %}
 </body>
 
 </html>

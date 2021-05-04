@@ -21,6 +21,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('admindashboard', view.admin_dashboard , name='adminpanel'),
     path('adminvalidasi', view.admin_validasi , name='adminvalidasi'),
-    path('', view.home_view , name='indexbase'),
+    path('', view.home_view , name='index'),
+    path('cari', view.cari_view, name='search'),
+    path('masuk', view.masuk_view, name='sign-in'),
+    path('daftar', view.daftar_view, name='sign-up'),
+    path('daftarseniman', view.daftarseniman_view, name='daftarseniman'),
 
 ]

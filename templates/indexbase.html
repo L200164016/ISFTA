@@ -5,11 +5,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ISFTA</title>
+  {% block title %} {% endblock %}
   <link rel="icon" href="{% static 'favicon-32x32.png' %}" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Leckerli+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{% static 'css/main.css' %}"" />
+  <link rel="stylesheet" href="{% static 'css/main.css' %}" />
   <script src="{% static 'js/uikit.js' %}"></script>
 </head>
 
@@ -21,17 +21,15 @@
       <div class="uk-navbar-left">
         <a class="uk-navbar-item uk-logo" href="indexbase.html">ISFTA</a>
         <ul class="uk-navbar-nav uk-visible@m uk-margin-large-left">
-          <li class="uk-active"><a href="index.html">Home</a></li>
-          <li ><a href="recipe.html">Profile</a></li>
-          <li ><a href="search.html">Search</a></li>
+          {% block navbaratas %}{% endblock %}
         </ul>
       </div>
       <div class="uk-navbar-right">
         <ul class="uk-navbar-nav uk-visible@m">
-          <li ><a href="sign-in.html">Sign In</a></li>
+          <div><a class="uk-button uk-button-primary" href="sign-up.html">Masuk</a></div>
         </ul>
         <div class="uk-navbar-item">
-          <div><a class="uk-button uk-button-primary" href="sign-up.html">Sign Up</a></div>
+          <div><a class="uk-button uk-button-primary" href="sign-up.html">Daftar</a></div>
         </div>          
         <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-toggle><span
           data-uk-navbar-toggle-icon></span></a>
@@ -39,6 +37,38 @@
     </div>
   </div>
 </nav>
+
+{% block content %} {% endblock %}
+
+<footer class="uk-section uk-section-default">
+	<div class="uk-container uk-text-secondary uk-text-500">
+		<div class="uk-child-width-1-2@s" data-uk-grid>
+			<div>
+				<a href="#" class="uk-logo">ISFTA</a>
+			</div>
+			<div class="uk-flex uk-flex-middle uk-flex-right@s">
+				<div data-uk-grid class="uk-child-width-auto uk-grid-small">
+					<div>
+						<a href="https://www.facebook.com/" data-uk-icon="icon: facebook; ratio: 0.8" class="uk-icon-button facebook" target="_blank"></a>
+					</div>
+					<div>
+						<a href="https://www.instagram.com/" data-uk-icon="icon: instagram; ratio: 0.8" class="uk-icon-button instagram" target="_blank"></a>
+					</div>
+					<div>
+						<a href="mailto:info@blacompany.com" data-uk-icon="icon: twitter; ratio: 0.8" class="uk-icon-button twitter" target="_blank"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="uk-margin-medium-top uk-text-small uk-text-muted">				
+			<div>Template Made by a <a class="uk-link-muted" href="https://drifter.works/" target="_blank">Drifter</a> in Guatemala City.</div>				
+			<div>Website Made by a <a class="uk-link-muted" href="https://drifter.works/" target="_blank">Cahyo Kresno Adji</a></div>
+		</div>
+	</div>
+</footer>
+  </div>
+</div>
+
 
 </body>
 

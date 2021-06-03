@@ -11,14 +11,14 @@
             <div class="menu">
                 <ul class="list">
                     <li class="header">MAIN NAVIGATION</li>
-                    <li>
-                        <a href="index.html">
+                        <a href="{% url 'adminpanel' %}">
                             <i class="material-icons">home</i>
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    <li class="active">
-                        <a href="pages/typography.html">
+                    <li>
+                        <li class="active">
+                        <a href="{% url 'adminvalidasi' %}">
                             <i class="material-icons">verified_user</i>
                             <span>Validasi Profile</span>
                         </a>
@@ -59,10 +59,7 @@
 <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>
-                    VALIDASI PROFILE
-                    <small>Untuk memvalidasi profile yang belum active</small>
-                </h2>
+                <h2>Validasi Profile</h2>
             </div>
             <!-- #END# Basic Examples -->
             <!-- Exportable Table -->
@@ -135,7 +132,6 @@
                     </div>
                 </div>
             </div>
-            <!-- #END# Exportable Table -->
         </div>
     </section>
     {% endblock %}
@@ -174,7 +170,3 @@
     <!-- Demo Js -->
     <script src="{% static 'js/demo.js' %}"></script>
     {% endblock %}
-
-</body>
-
-</html>

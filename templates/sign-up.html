@@ -14,7 +14,7 @@
   <div class="uk-width-1-2@m uk-padding-large uk-flex uk-flex-middle uk-flex-center" data-uk-height-viewport>
     <div class="uk-width-3-4@s">
       <div class="uk-text-center uk-margin-bottom">
-        <a class="uk-logo uk-text-primary uk-text-bold" href="index.html">ISFTA</a>
+        <a class="uk-logo uk-text-primary uk-text-bold" href="{% url 'index' %}">ISFTA</a>
       </div>
       <div class="uk-text-center uk-margin-medium-bottom">
         <h1 class="uk-h2 uk-letter-spacing-small">Buat Akun</h1>
@@ -26,7 +26,7 @@
           <label>Atau</label>
         </div>
         <div class="uk-width-1-1 uk-text-center">
-          <button class="uk-button uk-button-primary uk-button-large">Daftar Sebagai Seniman</button>
+          <a class="uk-button uk-button-primary uk-button-large" href="{% url 'daftarseniman' %}">Daftar Sebagai Seniman</a>
         </div>
         <div class="uk-width-1-1 uk-margin uk-text-center">
           <p class="uk-text-small uk-margin-remove">By signing up you agree to our <a class="uk-link-border" href="#">terms</a> of service.</p>
@@ -46,7 +46,7 @@
           <p>Sudah Mendaftar ? Silahkan Masuk</p>
         </div>
         <div class="uk-width-1-1 uk-text-center">
-          <a href="sign-in.html" class="uk-button uk-button-primary uk-button-large">Masuk</a>
+          <a href="{% url 'sign-in' %}" class="uk-button uk-button-primary uk-button-large">Masuk</a>
         </div>
       </div>
     </div>

@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block navbaratas %}
-          <li ><a href="index.html">Utama</a></li>
-          <li class="uk-active"><a href="search.html">Cari</a></li>
+          <li ><a href="{% url 'index'%}">Utama</a></li>
+          <li class="uk-active"><a href="{% url 'search'%}">Cari</a></li>
 {% endblock %}
 
 {% block content %}
